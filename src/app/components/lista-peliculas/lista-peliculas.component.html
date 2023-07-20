@@ -1,0 +1,12 @@
+<div class="grid-container">
+    <div *ngFor="let pelicula of peliculas" class="grid-item">
+      <mat-card class="example-card">
+        <img [src]="pelicula.images" (click)="mover(pelicula)" width="150" height="20" alt="Imagen de la película">
+      </mat-card>
+    </div>
+  </div>
+
+<!-- Add pagination controls here if needed -->
+
+<mat-paginator [length]="totalItems" [pageSize]="itemsPerPage" [pageIndex]="currentPage - 1"
+    (page)="onPageChange($event)"></mat-paginator>

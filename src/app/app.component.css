@@ -1,0 +1,24 @@
+.example-fill-remaining-space {
+    flex: 1 1 auto;
+  }
+  .example-container {
+    display: flex;
+    height: 100vh;
+  }
+  
+  .vertical-drawer {
+    width: 120px;
+  }
+  
+  .mat-drawer-content {
+    flex: 1;
+    padding: 16px;
+  }
+  
+  .button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Opcional: para alinear los botones a la izquierda */
+    padding: 16px; /* Opcional: agregar un poco de espacio entre los botones */
+  }
+  

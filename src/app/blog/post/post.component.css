@@ -1,0 +1,15 @@
+.mat-card {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+mat-card {
+    border-radius: 10px; /* Redondear el contenedor de la tarjeta */
+    overflow: hidden; /* Asegurarse de que la imagen se muestre dentro del contenedor redondeado */
+  }
+  
+  mat-card img {
+
+    display: block; /* Asegurarse de que la imagen no tenga espacios en blanco adicionales */
+    border-radius: 10px; /* Redondear la imagen */
+  }
+  

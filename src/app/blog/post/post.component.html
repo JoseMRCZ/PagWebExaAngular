@@ -1,0 +1,15 @@
+<mat-card class="example-card" *ngIf="pelicula">
+    <mat-card-title-group>
+        <mat-card-title>{{ pelicula.titulo }}</mat-card-title>
+        
+    </mat-card-title-group>
+
+    <mat-card-content>
+        <img  [src]="pelicula.images" width="180" heigt="180"
+            alt="Imagen de la película">
+        <p>Descripcion: {{pelicula.descricion}}</p>
+        <p>Fecha de estreno: {{pelicula.estreno}}</p>
+        <p>Puntuación: {{ pelicula.pop }}</p>
+    </mat-card-content>
+
+</mat-card>
