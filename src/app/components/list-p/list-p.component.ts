@@ -7,25 +7,29 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { Router } from '@angular/router';
 import { Pelicula } from './../../Models/pelicula.model';
 import { MatPaginatorModule } from '@angular/material/paginator';
-
+import { MatTableDataSource } from '@angular/material/table';
+import { MatTableModule } from '@angular/material/table';
 
 
 @Component({
-  selector: 'app-lista-peliculas',
-  templateUrl: './lista-peliculas.component.html',
-  styleUrls: ['./lista-peliculas.component.css'],
+  selector: 'app-list-p',
+  templateUrl: './list-p.component.html',
+  styleUrls: ['./list-p.component.css'],
   standalone: true,
   imports: [MatCardModule,
     MatButtonModule,
     CommonModule,
     MatGridListModule,
     MatPaginatorModule,
+    MatTableModule,
 
   ],
 })
-export class ListaPeliculasComponent implements OnInit {
+export class ListPComponent {
+
 
   peliculas: Pelicula[] = [];
+   dataSource!: MatTableDataSource<Pelicula>;
 
 
   // Pagination variables
@@ -35,9 +39,6 @@ export class ListaPeliculasComponent implements OnInit {
   i: number = 1;
   totalPages: number = 0;
   selectedPage: number = 0;
-
-
-
 
 
 
@@ -94,6 +95,7 @@ export class ListaPeliculasComponent implements OnInit {
         pop: peliculaDataFull.vote_average,
         images: imageBaseUrl + peliculaDataFull.poster_path,
       }));
+      this.dataSource = new MatTableDataSource<Pelicula>(this.peliculas);
       this.totalItems = data.total_results;
     });
     console.log("dentro lista b", this.peliculas);

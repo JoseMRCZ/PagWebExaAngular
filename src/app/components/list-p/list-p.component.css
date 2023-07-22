@@ -1,0 +1,4 @@
+img.pelicula-imagen {
+    width: 100px; /* Ajusta el ancho deseado para las imágenes */
+    height: auto; /* La altura se ajustará automáticamente para mantener la proporción */
+  }

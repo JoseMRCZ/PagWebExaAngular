@@ -4,14 +4,11 @@
   grid-template-columns: repeat(5, 150px); /* 5 columnas de 150px cada una */
   gap: 20px; /* Espacio entre las tarjetas */
   justify-content: center; /* Centrar la cuadrícula horizontalmente */
+  flex-grow: 1; /* Ocupar todo el espacio disponible en el contenedor padre */
 }
 
 .grid-item {
   width: 150px; /* Elige el ancho deseado para cada tarjeta */
-  border-radius: 10px;
-}
-
-.grid-item mat-card {
   border-radius: 10px; /* Redondear el contenedor de la tarjeta */
   overflow: hidden; /* Asegurarse de que la imagen se muestre dentro del contenedor redondeado */
 }
@@ -21,4 +18,19 @@
   height: auto;
   display: block; /* Asegurarse de que la imagen no tenga espacios en blanco adicionales */
   border-radius: 10px; /* Redondear la imagen */
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the contents horizontally */
+  height: 100vh; /* Set the height to 100% of the viewport */
+}
+
+.paginator-container {
+  width: 100vw; /* Make the paginator container span the entire width of the screen */
+  display: flex;
+  justify-content: center; /* Center the paginator horizontally */
+  margin-top: 20px;
+  margin-bottom: 20px; /* Add some spacing between the grid and paginator */
 }

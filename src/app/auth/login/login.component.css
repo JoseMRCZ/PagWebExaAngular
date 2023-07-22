@@ -1,10 +1,39 @@
+/* Set the flex container properties to center its children */
+.flex{
+    margin-left: 35%;
+}
+
+/* The rest of your existing CSS styles */
 form {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
+}
+
+.login-card {
+  max-width: 600px;
+  /* Remove the extra display property, as it's not necessary */
 }
 
 .mat-card {
-    margin-top: 200px;
-    padding: 40px;
-    width: 350px;
+  /* Adjust the margin and padding as needed */
+  padding: 40px;
+  width: 100%; /* Set the card's width to 100% of its container */
+  max-width: 660px; /* Optionally, limit the card's maximum width */
+  box-sizing: border-box; /* Include padding and border in the card's width */
 }
+
+.centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  .button-centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  .text-center {
+    text-align: center;
+  }

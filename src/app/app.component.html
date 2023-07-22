@@ -1,28 +1,69 @@
-<mat-toolbar>
+<div class="app-container">
+  <mat-toolbar>
     <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon"
-        (click)="toggleDrawer()">
-        <mat-icon>menu</mat-icon>
+      (click)="toggleDrawer()">
+      <mat-icon>menu</mat-icon>
     </button>
     <span>The MovieDB API</span>
     <span class="example-spacer"></span>
     <span class="example-fill-remaining-space"></span>
-    <button mat-icon-button class="example-icon login-icon" aria-label="Example icon-button with heart icon">
-        <mat-icon>account_circle</mat-icon>
-    </button>
-</mat-toolbar>
-<mat-drawer-container class="example-container">
-    <mat-drawer mode="side" [opened]="isDrawerOpened" class="vertical-drawer">
-        <div class="button-container">
-            <button mat-button routerLink="blog">Peliculas</button>
-            <button mat-button>Usuarios</button>
+    <div class="user-container">
+      <h1>{{ userName }}</h1>
+      <div class="user-container ">
+        <div class="user-avatar">
+          <img [src]="imag" routerLink="login" alt="Imagen de perfil">
         </div>
-    </mat-drawer>
-    <mat-drawer-content>
+      </div>
+     
 
-        <router-outlet>
-            <app-login></app-login>
-        </router-outlet>
+    </div>
+  </mat-toolbar>
+
+  <mat-drawer-container class="example-container">
+    <mat-drawer mode="side" [opened]="isDrawerOpened" class="vertical-drawer with-background">
+      
+      <div class="user-container">
+        <p>{{ userName }}</p>   
+      </div>
+      <div class="user-container">
+        <h1>{{ name }}</h1>
+   
+      </div>
+      <div class="user-container ">
+        <div class="user-avatar">
+          <img [src]="imag" alt="Imagen de perfil">
+        </div>
+      </div>
+      
+      <div class="button-container">
+        <button mat-button routerLink="components/lista-peliculas" (click)="toggleDrawer()">
+          <mat-icon>home</mat-icon>
+          Home
+        </button>
+        <button mat-button routerLink="components/listaP" (click)="toggleDrawer()">
+          <mat-icon>event_seat</mat-icon>
+          Películas
+        </button>
+        <button mat-button routerLink="users" (click)="toggleDrawer()">
+          <mat-icon>account_box</mat-icon>
+          Usuarios
+        </button>
+        <button mat-button routerLink="login" (click)="toggleDrawer()">
+          <mat-icon>exit_to_app</mat-icon>
+          Salir
+        </button>
+
+      </div>
+    </mat-drawer>
+
+    <mat-drawer-content class="gradient-background">
+
+      <router-outlet>
+        <app-login></app-login>
+      </router-outlet>
     </mat-drawer-content>
-</mat-drawer-container>
+  </mat-drawer-container>
+</div>
+
 
 <!--<app-lista-peliculas></app-lista-peliculas>-->

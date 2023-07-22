@@ -15,7 +15,10 @@ import { MaterialDesignModule } from './components/material-desing/material-desi
 import { PostComponent } from './blog/post/post.component';
 import { AdminblogComponent } from './adminblog/adminblog.component';
 import { DeleteDialogComponent } from './delete-dialog/delete-dialog.component';
-
+import { UsersComponent } from './users/users.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { ListPComponent } from './components/list-p/list-p.component';
+import { RegistrodialogoComponent } from './components/registrodialogo/registrodialogo.component'; 
 
 @NgModule({
   declarations: [
@@ -26,6 +29,9 @@ import { DeleteDialogComponent } from './delete-dialog/delete-dialog.component';
     PostComponent,
     AdminblogComponent,
     DeleteDialogComponent,
+    UsersComponent,
+    
+    
   ],
   imports: [
     BrowserModule,
@@ -33,7 +39,10 @@ import { DeleteDialogComponent } from './delete-dialog/delete-dialog.component';
     HttpClientModule,
     BrowserAnimationsModule,
     MaterialDesignModule,
+    ReactiveFormsModule,
     ListaPeliculasComponent,
+    RegistrodialogoComponent,
+    ListPComponent,
   ],
   providers: [],
   bootstrap: [AppComponent]
